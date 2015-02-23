@@ -20,3 +20,8 @@ CREATE TABLE IF NOT EXISTS `shortlink` (
 Shortened URLs are in the format: `domain?uniquekey`. It'll work without the `?`
 it's used here to keep the examples simple and working across webservers
 without additional configuration.
+
+To stop your API being abused there is an `apikey` set in Application.cfc which
+is required to get a shorten URI. For example:
+
+`http://localhost/shortener.cfm?apikey=your_value&uri=https://github.com/aliaspooryorik/urishortener`

@@ -12,6 +12,7 @@ component {
     // Note: it's preferable to use a bean factory
     application.NumberEncoder = new utils.NumberEncoder();
     application.URIShortener = new utils.URIShortener(application.NumberEncoder, "http://" & CGI.SERVER_NAME & "/?");
+    application.apiKey = "your_value"
   }
 
   void function onRequestStart() {
